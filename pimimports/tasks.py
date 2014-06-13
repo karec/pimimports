@@ -2,6 +2,9 @@ from __future__ import absolute_import
 import yaml
 from pimimports.celery import app
 from celery.utils.log import get_task_logger
+from subprocess import call
+import os
+from pimimports import settings
 
 logger = get_task_logger(__name__)
 
@@ -22,4 +25,7 @@ def play_import(key, value, imports):
 
 @app.task
 def play_one(name):
-    logger.info(name)
+    console_path = os.path.join(settings.PIM_ABS_PATH, 'app/console')
+    exec_path = "%s %s akeneo:batch:job %s" % (settings.PHP_PATH, console_path, name)
+    logger.info(exec_path)
+    call([exec_path], shell=True)
