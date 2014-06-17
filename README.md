@@ -26,4 +26,25 @@ You can configure the application for your need, you only need to update the fil
 pimimports/celery.py
 ```
 
-For more information about the configuration, please refer to the [celery docs](http://celery.readthedocs.org/en/latest/configuration.html)
+For more information about the app configuration, please refer to the [celery docs](http://celery.readthedocs.org/en/latest/configuration.html)
+
+You also need to update your PIM_PATH config in the file
+
+
+```
+#!sh
+
+pimimports/settings.py
+```
+
+This file only contains two settings :
+
+
+```
+#!python
+
+PIM_ABS_PATH = '/home/evalette/Projets/FeuVert-PIM'
+PHP_PATH = 'php'
+```
+
+Obviously you can use the os module to set your path, the script will only use this string to start jobs
