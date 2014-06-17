@@ -73,3 +73,17 @@ import_categories:
 You can simply configuring a job by setting up his name. If this job is needed by an other job you simply have to set a property "after" and setting up your job list. Every job in this list will wait for the previous to be ended for start, with this you can easly chainning your imports.
 If a job is a standalone job, simply set the name property, it will run in an other process and don't be lock by others job.
 The name of the import in the yaml file **must be the job code in your pim**
+
+## Lunch the script ##
+
+When your configuration is set, you juste have to run :
+
+
+
+```
+#!sh
+
+./main.py
+```
+
+Since the script is not blocking you can run it one shot or set it in a crontab
