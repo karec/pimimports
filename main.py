@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import yaml
 from pimimports.tasks import play_all
 
