@@ -1,2 +1,2 @@
-PIM_ABS_PATH = '/home/evalette/Projets/FeuVert-PIM'
+PIM_ABS_PATH = '/your/pim/project/path'
 PHP_PATH = 'php'
