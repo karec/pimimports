@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Configure your application ##
 
-You can configure the application for your need, you only add to update the file 
+You can configure the application for your need, you only need to update the file 
 
 
 ```
@@ -27,4 +27,3 @@ pimimports/celery.py
 ```
 
 For more information about the configuration, please refer to the [celery docs](http://celery.readthedocs.org/en/latest/configuration.html)
-
