@@ -8,7 +8,6 @@ from pimimports import settings
 
 logger = get_task_logger(__name__)
 
-@app.task
 def play_all(imports):
     logger.info('start import')
     while imports:

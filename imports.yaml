@@ -3,3 +3,6 @@ import_marque:
     after: [import_pneu, import_options, import_produits]
 import_categories:
     name: import_categories
+product_export:
+    name: product_export
+    after: [attribute_export, attributs_groupe, export_attributs_libelle, marque_export, pneu_export, product_export, produit_lie_export, produits_attributs_export]

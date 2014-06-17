@@ -8,4 +8,4 @@ imports = yaml.load(stream)
 
 
 if __name__ == '__main__':
-    play_all.delay(imports)
+    play_all(imports)
