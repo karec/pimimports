@@ -10,8 +10,6 @@ At the same time, imports that do not required any other imports will be lunch i
 
 
 ```
-#!sh
-
 pip install -r requirements.txt
 ```
 
@@ -21,8 +19,6 @@ You can configure the application for your need, you only need to update the fil
 
 
 ```
-#!sh
-
 pimimports/celery.py
 ```
 
@@ -32,8 +28,6 @@ You also need to update your PIM_PATH config in the file
 
 
 ```
-#!sh
-
 pimimports/settings.py
 ```
 
@@ -41,8 +35,6 @@ This file only contains two settings :
 
 
 ```
-#!python
-
 PIM_ABS_PATH = '/home/evalette/Projets/FeuVert-PIM'
 PHP_PATH = 'php'
 ```
@@ -59,8 +51,6 @@ The default path for the logs is :
 
 
 ```
-#!sh
-
 /var/log/celery/
 ```
 
@@ -72,8 +62,6 @@ The file imports.yaml is used for configuration, it's look like this :
 
 
 ```
-#!yaml
-
 import_marque:
     name: import_marque
     after: [import_pneu, import_options, import_produits]
@@ -94,8 +82,6 @@ When your configuration is set, you juste have to run :
 
 
 ```
-#!sh
-
 ./main.py
 ```
 
