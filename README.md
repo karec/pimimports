@@ -43,7 +43,7 @@ Obviously you can use the os module to set your path, the script will only use t
 
 ## Using it as daemon ##
 
-You can find in this repo an basic supervisor configuration, but feel free to deamonize the script in an other way. For more information about setting up celery worker as a daemon [here](http://celery.readthedocs.org/en/latest/tutorials/daemonizing.html)
+You can find in this repo a basic supervisor configuration, but feel free to deamonize the script in an other way. For more information about setting up celery worker as a daemon [here](http://celery.readthedocs.org/en/latest/tutorials/daemonizing.html)
 
 ## Configuring logs ##
 
