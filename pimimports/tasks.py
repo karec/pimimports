@@ -5,6 +5,7 @@ from celery.utils.log import get_task_logger
 from subprocess import call
 import os
 from pimimports import settings
+from celery import chain
 
 logger = get_task_logger(__name__)
 
@@ -17,7 +18,12 @@ def play_all(imports):
 
 def play_import(key, value, imports):
     if value.get('after', None):
-        play_one.apply_async((key,), link=[play_one.si(name) for name in value.get('after')])
+        subtasks = []
+        subtasks.append(play_one.si(key))
+        for name in value.get('after'):
+            subtasks.append(play_one.si(name))
+        workflow = chain(*subtasks)
+        workflow.delay()
     else:
         play_one.delay(key)
     return imports
